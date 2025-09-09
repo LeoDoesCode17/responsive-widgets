@@ -16,11 +16,15 @@ class HomePage extends StatelessWidget {
   static const List<String> routes = [
     '/responsive-widget',
     '/inherited-widget',
+    '/stateless-widget',
+    '/stateful-widget',
   ];
 
   static const List<String> labels = [
     'Responsive Widget',
     'Inherited Widget',
+    'Stateless Widget',
+    'Stateful Widget'
   ];
 
   @override
