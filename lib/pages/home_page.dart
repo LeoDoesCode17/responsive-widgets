@@ -14,25 +14,11 @@ class HomePage extends StatelessWidget {
   ];
 
   static const List<String> routes = [
-    '/layout-builder',
-    '/media-query',
-    '/expanded',
-    '/flexible',
-    '/aspect-ratio',
-    '/orientation-builder',
-    '/wrap',
-    '/inherited',
+    '/responsive-widget',
   ];
 
   static const List<String> labels = [
-    'Layout Builder',
-    'Media Query',
-    'Expanded',
-    'Flexible',
-    'Aspect Ratio',
-    'Orientation Builder',
-    'Wrap',
-    'Inherited Widget',
+    'Responsive Widget',
   ];
 
   @override
