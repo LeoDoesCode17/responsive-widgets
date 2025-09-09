@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_widgets/pages/entrypoint_pages.dart';
 import 'package:responsive_widgets/pages/home_page.dart';
 import 'package:responsive_widgets/pages/responsive_widget_pages.dart';
 import 'package:responsive_widgets/pages/inherited_widget_page.dart';
@@ -20,6 +21,7 @@ class ResponsiveWidgetApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: <String, WidgetBuilder>{
+        '/responsiive-widget': (BuildContext context) => const ResponsiveEntryPoint(),
         '/responsive-widget/layout-builder': (BuildContext context) => const LayoutBuilderPage(),
         '/responsive-widget/media-query': (BuildContext context) => const MediaQueryPage(),
         '/responsive-widget/expanded': (BuildContext context) => const ExpandedPage(),
