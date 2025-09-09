@@ -30,6 +30,8 @@ class ResponsiveWidgetApp extends StatelessWidget {
             const OrientationBuilderPage(),
         '/responsive-widget/wrap': (BuildContext context) => const WrapPage(),
         '/inherited-widget': (BuildContext context) => const InheritedEntryPoint(),
+        '/stateless-widget': (BuildContext context) => const StatelessEntryPoint(),
+        'stateful-widget': (BuildContext context) => const StatefulEntryPoint(),
       },
     );
   }
