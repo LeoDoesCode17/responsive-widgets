@@ -110,10 +110,12 @@ class StatefulEntryPoint extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text('Stateful Widget Page'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Stateful Widget Page'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
+      body: Center(child: Text('Stateful Widget Page')),
     );
   }
 }
