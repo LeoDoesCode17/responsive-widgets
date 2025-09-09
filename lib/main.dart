@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:responsive_widgets/pages/entrypoint_pages.dart';
 import 'package:responsive_widgets/pages/home_page.dart';
 import 'package:responsive_widgets/pages/responsive_widget_pages.dart';
-import 'package:responsive_widgets/pages/inherited_widget_page.dart';
 
 void main() {
   runApp(const ResponsiveWidgetApp());
@@ -30,7 +29,6 @@ class ResponsiveWidgetApp extends StatelessWidget {
         '/responsive-widget/orientation-builder': (BuildContext context) =>
             const OrientationBuilderPage(),
         '/responsive-widget/wrap': (BuildContext context) => const WrapPage(),
-        '/responsive-widget/inherited': (BuildContext context) => const InheritedWidgetPage(),
       },
     );
   }

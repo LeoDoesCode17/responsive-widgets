@@ -21,7 +21,6 @@ class ResponsiveEntryPoint extends StatelessWidget {
     '/responsive-widget/aspect-ratio',
     '/responsive-widget/orientation-builder',
     '/responsive-widget/wrap',
-    '/responsive-widget/inherited',
   ];
 
   static const List<String> labels = [
@@ -32,7 +31,6 @@ class ResponsiveEntryPoint extends StatelessWidget {
     'Aspect Ratio',
     'Orientation Builder',
     'Wrap',
-    'Inherited Widget',
   ];
 
   @override
