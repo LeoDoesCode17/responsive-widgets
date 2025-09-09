@@ -21,7 +21,7 @@ class ResponsiveWidgetApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: <String, WidgetBuilder>{
-        '/responsiive-widget': (BuildContext context) => const ResponsiveEntryPoint(),
+        '/responsive-widget': (BuildContext context) => const ResponsiveEntryPoint(),
         '/responsive-widget/layout-builder': (BuildContext context) => const LayoutBuilderPage(),
         '/responsive-widget/media-query': (BuildContext context) => const MediaQueryPage(),
         '/responsive-widget/expanded': (BuildContext context) => const ExpandedPage(),
