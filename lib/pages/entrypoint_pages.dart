@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_widgets/pages/inherited_widget_page.dart';
 
 class ResponsiveEntryPoint extends StatelessWidget {
   const ResponsiveEntryPoint({super.key});
@@ -82,5 +83,14 @@ class ResponsiveEntryPoint extends StatelessWidget {
         },
       ),
     );
+  }
+}
+
+class InheritedEntryPoint extends StatelessWidget {
+  const InheritedEntryPoint({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const InheritedWidgetPage();
   }
 }
