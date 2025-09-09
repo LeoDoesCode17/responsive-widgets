@@ -20,15 +20,15 @@ class ResponsiveWidgetApp extends StatelessWidget {
       ),
       home: const HomePage(),
       routes: <String, WidgetBuilder>{
-        '/layout-builder': (BuildContext context) => const LayoutBuilderPage(),
-        '/media-query': (BuildContext context) => const MediaQueryPage(),
-        '/expanded': (BuildContext context) => const ExpandedPage(),
-        '/flexible': (BuildContext context) => const FlexiblePage(),
-        '/aspect-ratio': (BuildContext context) => const AspectRatioPage(),
-        '/orientation-builder': (BuildContext context) =>
+        '/responsive-widget/layout-builder': (BuildContext context) => const LayoutBuilderPage(),
+        '/responsive-widget/media-query': (BuildContext context) => const MediaQueryPage(),
+        '/responsive-widget/expanded': (BuildContext context) => const ExpandedPage(),
+        '/responsive-widget/flexible': (BuildContext context) => const FlexiblePage(),
+        '/responsive-widget/aspect-ratio': (BuildContext context) => const AspectRatioPage(),
+        '/responsive-widget/orientation-builder': (BuildContext context) =>
             const OrientationBuilderPage(),
-        '/wrap': (BuildContext context) => const WrapPage(),
-        '/inherited': (BuildContext context) => const InheritedWidgetPage(),
+        '/responsive-widget/wrap': (BuildContext context) => const WrapPage(),
+        '/responsive-widget/inherited': (BuildContext context) => const InheritedWidgetPage(),
       },
     );
   }

@@ -14,14 +14,14 @@ class ResponsiveEntryPoint extends StatelessWidget {
   ];
 
   static const List<String> routes = [
-    '/layout-builder',
-    '/media-query',
-    '/expanded',
-    '/flexible',
-    '/aspect-ratio',
-    '/orientation-builder',
-    '/wrap',
-    '/inherited',
+    '/responsive-widget/layout-builder',
+    '/responsive-widget/media-query',
+    '/responsive-widget/expanded',
+    '/responsive-widget/flexible',
+    '/responsive-widget/aspect-ratio',
+    '/responsive-widget/orientation-builder',
+    '/responsive-widget/wrap',
+    '/responsive-widget/inherited',
   ];
 
   static const List<String> labels = [
