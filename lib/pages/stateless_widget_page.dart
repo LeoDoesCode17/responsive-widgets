@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_widgets/pages/profile_page.dart';
 
 class StatelessWidgetPage extends StatelessWidget {
   const StatelessWidgetPage({super.key});
@@ -10,9 +11,7 @@ class StatelessWidgetPage extends StatelessWidget {
         title: Text('Stateless Widget Page'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(
-        child: Text('Stateless Widget Page'),
-      ),
+      body: ProfilePage(),
     );
   }
 }
