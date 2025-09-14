@@ -108,6 +108,20 @@ class StatelessEntryPoint extends StatelessWidget {
 class StatefulEntryPoint extends StatelessWidget {
   const StatefulEntryPoint({super.key});
 
+  static const List<Color> colors = [
+    Colors.red,
+    Colors.orange,
+    Colors.yellow,
+    Colors.green,
+    Colors.blue,
+    Colors.indigo,
+    Colors.purple,
+  ];
+
+  static const List<String> routes = ['/stateful-widget/counter-coin'];
+
+  static const List<String> labels = ['Counter Coin'];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -115,7 +129,47 @@ class StatefulEntryPoint extends StatelessWidget {
         title: Text('Stateful Widget Page'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
-      body: Center(child: Text('Stateful Widget Page')),
+      body: LayoutBuilder(
+        builder: (context, constraints) {
+          int crossAxisCount = 2;
+          if (constraints.maxWidth > 600) {
+            crossAxisCount = 4;
+          } else if (constraints.maxWidth > 400) {
+            crossAxisCount = 3;
+          }
+
+          return GridView.builder(
+            padding: EdgeInsets.all(10),
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: crossAxisCount /* Number of column */,
+              crossAxisSpacing: 10,
+              /* Distance between column */
+              mainAxisSpacing: 10 /* Distance between row */,
+            ),
+            itemBuilder: (context, index) {
+              return ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: colors[index % colors.length],
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  padding: const EdgeInsets.all(16),
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, routes[index]);
+                },
+                child: Center(
+                  child: Text(
+                    labels[index],
+                    style: TextStyle(color: Colors.black, fontSize: 18),
+                  ),
+                ),
+              );
+            },
+            itemCount: routes.length,
+          );
+        },
+      ),
     );
   }
 }
