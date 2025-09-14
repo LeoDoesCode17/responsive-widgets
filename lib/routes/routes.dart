@@ -11,4 +11,5 @@ class AppRoutes {
   static const inheritedWidget = '/inherited-widget';
   static const statelessWidget = '/stateless-widget';
   static const statefulWidget = '/stateful-widget';
+  static const counterCoin = '/stateful-widget/counter-coin';
 }
