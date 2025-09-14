@@ -94,3 +94,77 @@ class _CounterCoinPageState extends State<CounterCoinPage> {
     );
   }
 }
+
+class PasswordValidatorPage extends StatefulWidget {
+  const PasswordValidatorPage({super.key});
+
+  @override
+  State<PasswordValidatorPage> createState() => _PasswordValidatorPageState();
+}
+
+class _PasswordValidatorPageState extends State<PasswordValidatorPage> {
+  String _password = '';
+  bool get hasMinLength => _password.length >= 8;
+  bool get hasNumber => _password.contains(RegExp(r'[0-9]'));
+  bool get hasUppercase => _password.contains(RegExp(r'[A-Z]'));
+  bool get hasSpecialChar =>
+      _password.contains(RegExp(r'[!@#$%^&*(),.?":{}|<>_-]'));
+
+  Widget _buildRequirement(String text, bool met) {
+    return Row(
+      children: [
+        Icon(
+          met ? Icons.check_circle : Icons.cancel,
+          color: met ? Colors.green : Colors.red,
+          size: 18,
+        ),
+        const SizedBox(width: 8),
+        Text(text),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Password Validator Page'),
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+      ),
+      body: Padding(
+        padding: EdgeInsets.all(16),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Text(
+              'Password Validator Page',
+              style: Theme.of(context).textTheme.titleLarge,
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 16),
+            TextField(
+              obscureText: true,
+              decoration: const InputDecoration(
+                labelText: 'Input Password',
+                border: OutlineInputBorder(),
+              ),
+              onChanged: (value) {
+                setState(() {
+                  _password = value;
+                });
+              },
+            ),
+            SizedBox(height: 8),
+            _buildRequirement("At least 8 characters", hasMinLength),
+            SizedBox(height: 4),
+            _buildRequirement("At least 1 number", hasNumber),
+            SizedBox(height: 4),
+            _buildRequirement("At least 1 uppercase letter", hasUppercase),
+            SizedBox(height: 4),
+            _buildRequirement("At least 1 special character", hasSpecialChar),
+          ],
+        ),
+      ),
+    );
+  }
+}
