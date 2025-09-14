@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_widgets/pages/inherited_widget_page.dart';
 import 'package:responsive_widgets/pages/stateless_widget_page.dart';
+import 'package:responsive_widgets/routes/routes.dart';
 
 class ResponsiveEntryPoint extends StatelessWidget {
   const ResponsiveEntryPoint({super.key});
@@ -15,25 +16,9 @@ class ResponsiveEntryPoint extends StatelessWidget {
     Colors.purple,
   ];
 
-  static const List<String> routes = [
-    '/responsive-widget/layout-builder',
-    '/responsive-widget/media-query',
-    '/responsive-widget/expanded',
-    '/responsive-widget/flexible',
-    '/responsive-widget/aspect-ratio',
-    '/responsive-widget/orientation-builder',
-    '/responsive-widget/wrap',
-  ];
+  static List<String> routes = AppRoutes.responsiveWidgetRoutes();
 
-  static const List<String> labels = [
-    'Layout Builder',
-    'Media Query',
-    'Expanded',
-    'Flexible',
-    'Aspect Ratio',
-    'Orientation Builder',
-    'Wrap',
-  ];
+  static List<String> labels = AppRoutes.responsiveWidgetLabels();
 
   @override
   Widget build(BuildContext context) {
@@ -118,9 +103,9 @@ class StatefulEntryPoint extends StatelessWidget {
     Colors.purple,
   ];
 
-  static const List<String> routes = ['/stateful-widget/counter-coin'];
+  static List<String> routes = AppRoutes.statefulWidgetRoutes();
 
-  static const List<String> labels = ['Counter Coin'];
+  static List<String> labels = AppRoutes.statefulLabels();
 
   @override
   Widget build(BuildContext context) {

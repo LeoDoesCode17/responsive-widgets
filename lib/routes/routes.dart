@@ -21,7 +21,15 @@ class AppRoutes {
     orientationBuilder,
     wrap,
   ];
-  static List<String> statefulWidetRoutes() => [
-    counterCoin
+  static List<String> responsiveWidgetLabels() => [
+    'Layout Builder',
+    'Media Query',
+    'Expanded',
+    'Flexible',
+    'Aspect Ratio',
+    'Orientation Builder',
+    'Wrap'
   ];
+  static List<String> statefulWidgetRoutes() => [counterCoin];
+  static List<String> statefulLabels() => ['Counter Coin'];
 }
