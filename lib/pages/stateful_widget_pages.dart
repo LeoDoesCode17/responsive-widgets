@@ -9,7 +9,7 @@ class CounterCoinPage extends StatefulWidget {
 
 class _CounterCoinPageState extends State<CounterCoinPage> {
   int _coins = 0;
-  static const double _coinWidth = 120;
+  static const double _coinWidth = 160;
   static const double _coinHeight = 160;
 
   void _incrementCoin() => setState(() => _coins++);
@@ -38,6 +38,7 @@ class _CounterCoinPageState extends State<CounterCoinPage> {
           fit: BoxFit.cover,
           width: _coinWidth,
           height: _coinHeight,
+          scale: 0.1,
         ),
       ),
     );
@@ -50,11 +51,31 @@ class _CounterCoinPageState extends State<CounterCoinPage> {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text('Counter Coin Page'),
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          FloatingActionButton(
+            onPressed: _incrementCoin,
+            tooltip: 'Increment',
+            child: const Icon(Icons.add),
+          ),
+          SizedBox(width: 24),
+          FloatingActionButton(
+            onPressed: _coins > 0 ? _decrementCoin : null,
+            tooltip: 'Decrement',
+            backgroundColor: _coins > 0
+                ? Theme.of(context).colorScheme.primary
+                : Colors.grey,
+            child: const Icon(Icons.remove),
+          ),
+        ],
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(16),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Welcome, Add or Remove Coins',
@@ -64,27 +85,8 @@ class _CounterCoinPageState extends State<CounterCoinPage> {
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 8),
-              Expanded(child: SingleChildScrollView(child: _buildCoinList())),
+              _buildCoinList(),
               SizedBox(height: 16),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  FloatingActionButton(
-                    onPressed: _incrementCoin,
-                    tooltip: 'Increment',
-                    child: const Icon(Icons.add),
-                  ),
-                  SizedBox(width: 24),
-                  FloatingActionButton(
-                    onPressed: _coins > 0 ? _decrementCoin : null,
-                    tooltip: 'Decrement',
-                    backgroundColor: _coins > 0
-                        ? Theme.of(context).colorScheme.primary
-                        : Colors.grey,
-                    child: const Icon(Icons.remove),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
