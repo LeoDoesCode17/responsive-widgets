@@ -12,4 +12,16 @@ class AppRoutes {
   static const statelessWidget = '/stateless-widget';
   static const statefulWidget = '/stateful-widget';
   static const counterCoin = '/stateful-widget/counter-coin';
+  static List<String> responsiveWidgetRoutes() => [
+    layoutBuilder,
+    mediaQuery,
+    expanded,
+    flexible,
+    aspectRatio,
+    orientationBuilder,
+    wrap,
+  ];
+  static List<String> statefulWidetRoutes() => [
+    counterCoin
+  ];
 }
