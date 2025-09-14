@@ -36,6 +36,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const StatefulEntryPoint());
       case AppRoutes.counterCoin:
         return MaterialPageRoute(builder: (_) => const CounterCoinPage());
+      case AppRoutes.passwordValidator:
+        return MaterialPageRoute(builder: (_) => const PasswordValidatorPage());
       default:
         return _errorRoute();
     }

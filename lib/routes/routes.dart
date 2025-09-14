@@ -12,6 +12,8 @@ class AppRoutes {
   static const statelessWidget = '/stateless-widget';
   static const statefulWidget = '/stateful-widget';
   static const counterCoin = '/stateful-widget/counter-coin';
+  static const passwordValidator = '/stateful-widget/password-validator';
+
   static List<String> responsiveWidgetRoutes() => [
     layoutBuilder,
     mediaQuery,
@@ -28,8 +30,11 @@ class AppRoutes {
     'Flexible',
     'Aspect Ratio',
     'Orientation Builder',
-    'Wrap'
+    'Wrap',
   ];
-  static List<String> statefulWidgetRoutes() => [counterCoin];
-  static List<String> statefulLabels() => ['Counter Coin'];
+  static List<String> statefulWidgetRoutes() => [counterCoin, passwordValidator];
+  static List<String> statefulLabels() => [
+    'Counter Coin',
+    'Password Validator',
+  ];
 }
