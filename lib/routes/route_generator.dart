@@ -12,6 +12,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const HomePage());
       case AppRoutes.responsiveWidget:
         return MaterialPageRoute(builder: (_) => const ResponsiveEntryPoint());
+      case AppRoutes.layoutBuilder:
+        return MaterialPageRoute(builder: (_) => const LayoutBuilderPage());
       case AppRoutes.mediaQuery:
         return MaterialPageRoute(builder: (_) => const MediaQueryPage());
       case AppRoutes.expanded:
